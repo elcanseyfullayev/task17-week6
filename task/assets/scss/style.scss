@@ -1,0 +1,206 @@
+@import "./base/reset";
+
+body {
+    background-image: linear-gradient(rgba(47, 23, 15, 0.65), rgba(47, 23, 15, 0.65)), url(https://startbootstrap.github.io/startbootstrap-business-casual/assets/img/bg.jpg);
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    font-family: 'Roboto', sans-serif;
+}
+
+// Header
+
+header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 280px;
+    .h2 {
+        color: #e6a756;
+        font-size: 2rem;
+    }
+    .h1 {
+        color: #f6e1c5;
+        font-weight: 100;
+        font-size: 5rem;
+    }
+}
+
+// Navbar
+
+nav {
+    background-color: rgba(47, 23, 15, 0.9);
+    height: 80px;
+    max-width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .menu {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        width: 27%;
+        font-weight: 800;
+        color: rgba(255, 255, 255, 0.7);
+        .menuitem {
+            cursor: pointer;
+            transition: 300ms;
+            a {
+                color: rgba(255, 255, 255, 0.7);
+                transition: 300ms;
+            }
+            a:hover {
+                color: rgba(255, 255, 255, 0.473);
+            }
+        }
+        .menuitem:hover {
+            color: rgba(255, 255, 255, 0.473);
+        }
+    }
+    
+}
+
+// Freshcoffee
+
+#freshcoffee {
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    min-height: 600px;
+    margin: 80px 100px;
+    position: relative;
+    .about {
+        background-color: #f6e1c5;
+        min-height: 300px;
+        max-width: 40%;
+        position: absolute;
+        z-index: 1;
+        margin-top: -200px;
+        left: 80px;
+        border-radius: 7px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        text-align: center;
+        gap: 20px;
+        padding: 0 30px;
+        .head {
+            h1 {
+                font-size: 3rem;
+                font-weight: 200;
+            }
+        }
+        p {
+            font-weight: 300;
+        }
+        .visit {
+            background-color: #e6a756;
+            height: 60px;
+            width: 150px;
+            display: grid;
+            place-items: center;
+            border-radius: 7px;
+            font-size: 13px;
+            font-weight: 500;
+            cursor: pointer;
+            transition: 300ms;
+        }
+        .visit:hover {
+            background-color: #e4b67a;
+        }
+    }
+    img {
+        width: 75%;
+        float: right;
+    }
+}
+
+// Promise
+
+#promise {
+    min-height: 50vh;
+    background-color: rgba(230, 167, 86, 0.9);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .promisebox {
+        background-color: #f6e1c5;
+        min-height: 270px;
+        max-width: 900px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 0 50px;
+        text-align: center;
+        gap: 35px;
+        border-radius: 7px;
+        .promisehead {
+            h1 {
+                font-size: 3rem;
+                font-weight: 200;
+            }
+        }
+        p{
+            font-weight: 300;
+        }
+    }
+}
+
+.boxborder {
+    border: 3px solid #f3d0a1;
+    padding: 5px;
+    border-radius: 8px;
+    min-height: 270px;
+}
+
+// Responsive navbar
+
+#resnav {
+    background-color: rgba(47, 23, 15, 0.9);
+    height: 60px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0 50px;
+    display: none;
+    h1 {
+        color: #e6a756;
+    }
+    i {
+        font-size: 36px;
+        color: gainsboro;
+    }
+}
+
+// Media queries
+
+@media only screen and (max-width: 1200px) {
+    header {
+        display: none;
+    }
+    nav {
+        display: none;
+    }
+    #resnav {
+        display: flex;
+    }
+    #freshcoffee {
+        display: flex;
+        flex-direction: column;
+        margin: 20px 0;
+        gap: 10px;
+        .about {
+            position: relative;
+            min-width: 40%;
+            max-width: 100%;
+            left: 0px;
+        }
+        img {
+            position: absolute;
+            top: 0px;
+        }
+    }
+  }
